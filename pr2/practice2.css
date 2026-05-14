@@ -1,0 +1,93 @@
+/*
+  Стилі для картки. Студент пише сюди.
+
+  Обов'язкові вимоги:
+
+  1. Глобально: * { box-sizing: border-box; } 
+  2. CSS-змінні в :root — щонайменше 4 токени
+     (наприклад: --accent, --text, --radius, --space).
+     Решта правил використовує var(...).
+
+  3. Картка:
+     - фон, рамка або тінь, border-radius, padding;
+     - фіксована ширина ~280px, центрування на сторінці;
+     - елементи в стовпець, кнопка завжди прилягає до низу
+       (підказка: flex-direction: column + margin-top: auto).
+
+  4. Зображення:
+     - фіксоване співвідношення сторін через aspect-ratio;
+     - object-fit: cover, щоб не спотворювалось.
+
+  5. Опис (.card-description):
+     - максимум 2 рядки з трикрапкою (-webkit-line-clamp: 2,
+       display: -webkit-box, -webkit-box-orient: vertical, overflow: hidden).
+
+  6. Hover на картці:
+     - субтильна elevation (зміна тіні або translateY(-2px));
+     - плавна transition (~200ms).
+
+  7. Кнопка:
+     - :hover (зміна фону/тексту);
+     - :focus-visible (видимий outline для клавіатури);
+     - transition (~150ms).
+
+  Цільовий вигляд — у target-card.html (відкрити окремо).
+*/
+
+/* Студент починає звідси */
+* {
+    box-sizing: border-box;
+}
+:root {
+    --accent: #007bff;
+    --text: #333;
+    --radius: 8px;
+    --space: 1rem;
+}
+.card {
+    margin: auto;
+    margin-top: 200px;
+    background-color: #fff;
+    border-radius: var(--radius);
+    padding: var(--space);
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: transform 200ms;
+}
+.card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.card-description {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card-action {
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 150ms;
+}
+.card-action:hover {
+    background-color: #0056b3;
+}
+.card-action:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}

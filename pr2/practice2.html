@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Картка — практична CSS</title>
+  <link rel="stylesheet" href="practice2.css">
+</head>
+<body>
+
+  <!--
+    Варіант контенту визначається викладачем.
+    Структура (теги, класи) однакова для всіх варіантів —
+    змінюється тільки контент усередині.
+
+    Варіант A — Картка ТОВАРУ
+    Варіант B — Картка ПРОФІЛЮ
+    Варіант C — Картка СТАТТІ
+    Варіант D — Картка КУРСУ
+  -->
+   <article class="card">
+    <img class="card-image"
+         src="https://via.placeholder.com/280x180/cccccc/666666?text=Image"
+         alt="Зображення для картки">
+
+    <h3 class="card-title">Назва товару / профілю / статті</h3>
+
+    <p class="card-meta">
+      Допоміжна інформація: автор, дата, тривалість тощо
+    </p>
+
+    <p class="card-description">
+      Короткий опис: 1–2 речення, які пояснюють, про що ця картка
+      та чому вона має зацікавити користувача.
+    </p>
+
+
+
+    <button class="card-action" type="button">
+      Дізнатися більше
+    </button>
+  </article>
+
+</body>
+</html>
