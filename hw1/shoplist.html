@@ -11,73 +11,66 @@
     <header class="header">
         <h1 class="header-title">Список покупок</h1>
     </header>
-    <hr>
 
     <div class="block">
         <div class="cart-redactor">
 
                 <input type="text" class="cart-redactor-input" placeholder="Enter item name">
-                <button class="add-to-list-button">Add to list</button>
-                <hr>
+                <button class="add-to-list-button" data-tooltip="Add an element to the list">Add to list</button>
 
             <div class="row">
                 <span class="item">Tomatoes</span>
-                <button class="minus-button">-</button>
+                <button class="minus-button" data-tooltip="Dec element quantity">-</button>
                 <span class="counter">1</span>
-                <button class="plus-button">+</button>
-                <button class="bought-button">Bought</button>
-                <button class="delete-button">Delete</button>
-                <hr>
+                <button class="plus-button" data-tooltip="Inc element quantity">+</button>
+                <button class="bought-button" data-tooltip="Already bought element">Bought</button>
+                <button class="delete-button" data-tooltip="Delet from cart">Delete</button>
             </div>
 
             
             <div class="row">
                 <span class="item">Bread</span>
-                <button class="minus-button">-</button>
+                <button class="minus-button" data-tooltip="Dec element quantity">-</button>
                 <span class="counter">1</span>
-                <button class="plus-button">+</button>
-                <button class="bought-button">Bought</button>
-                <button class="delete-button">Delete</button>
-                <hr>
+                <button class="plus-button"data-tooltip="Inc element quantity">+</button>
+                <button class="bought-button"data-tooltip="Already bought element">Bought</button>
+                <button class="delete-button"data-tooltip="Delet from cart">Delete</button>
             </div>
             
 
             <div class="row">
                 <span class="item">Milk</span>
-                <button class="minus-button">-</button>
+                <button class="minus-button"data-tooltip="Dec element quantity">-</button>
                 <span class="counter">1</span>
-                <button class="plus-button">+</button>
-                <button class="bought-button">Bought</button>
-                <button class="delete-button">Delete</button>
-                <hr>
+                <button class="plus-button"data-tooltip="Inc element quantity">+</button>
+                <button class="bought-button"data-tooltip="Already bought element">Bought</button>
+                <button class="delete-button"data-tooltip="Delet from cart">Delete</button>
             </div>
             
 
         </div>
 
         <div class="cart-data">
-            <span class="data">Left
-                <span class="item-in-list">
-                <span> Tomatoes 
-                    <span class="counter-in-list">1</span>
-                </span>
-                <span> Bread
-                    <span class="counter-in-list">1</span>
-                </span>
-                <span> Milk
-                    <span class="counter-in-list">1</span>
-                </span>
-            </span>
-            <hr>
-            </span>
+            <h2 class="data">Left
+                <div class="item-row">
+                    <div class="item-in-list"> Tomatoes 
+                        <span class="counter-in-list">1</span>
+                    </div>
+                    <div class="item-in-list"> Bread
+                        <span class="counter-in-list">1</span>
+                    </div>
+                    <div class="item-in-list"> Milk
+                        <span class="counter-in-list">1</span>
+                    </div>
+                </div>
+            </h2>
             
-
-            <span class="data">Bought</span>
+            <h2 class="data">Bought</h2>
         </div>
     </div>
 
     <span class="badge">
-        Buy List
+        <span class="title">Buy List</span>
         <span class="created-by">created by:</span>
         <span class="author">Nikita Hella</span>
     </span>
