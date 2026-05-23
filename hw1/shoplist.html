@@ -3,81 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta lang="uk">
     <link rel="stylesheet" href="shoplist.css">
-    <title>Document</title>
+    <script src="shoplist.js" defer></script>
+    <title>Shopping List</title>
 </head>
 <body>
     <header class="header">
-        <h1 class="header-title">Список покупок</h1>
+        <h1 class="header-title">Shopping List</h1>
     </header>
-    <hr>
 
     <div class="block">
         <div class="cart-redactor">
 
+            <div class="input-sec">
                 <input type="text" class="cart-redactor-input" placeholder="Enter item name">
-                <button class="add-to-list-button">Add to list</button>
-                <hr>
+                <button class="add-to-list-button" data-tooltip="Add an element to the list">Add to list</button>
+            </div>
 
             <div class="row">
                 <span class="item">Tomatoes</span>
-                <button class="minus-button">-</button>
-                <span class="counter">1</span>
-                <button class="plus-button">+</button>
-                <button class="bought-button">Bought</button>
-                <button class="delete-button">Delete</button>
-                <hr>
+                
+                <div class="counter-group">
+                    <button class="minus-button" data-tooltip="Decrease element quantity">-</button>
+                    <span class="counter">2</span>
+                    <button class="plus-button" data-tooltip="Increase element quantity">+</button>
+                </div>
+                
+                <div class="action-group">
+                    <button class="bought-button" data-tooltip="Mark as bought">Bought</button>
+                    <button class="delete-button" data-tooltip="Delete from cart">✖️</button>
+                </div>
             </div>
 
-            
             <div class="row">
                 <span class="item">Bread</span>
-                <button class="minus-button">-</button>
-                <span class="counter">1</span>
-                <button class="plus-button">+</button>
-                <button class="bought-button">Bought</button>
-                <button class="delete-button">Delete</button>
-                <hr>
+                
+                <div class="counter-group">
+                    <button class="minus-button" data-tooltip="Decrease element quantity">-</button>
+                    <span class="counter">2</span>
+                    <button class="plus-button" data-tooltip="Increase element quantity">+</button>
+                </div>
+                
+                <div class="action-group">
+                    <button class="bought-button" data-tooltip="Mark as bought">Bought</button>
+                    <button class="delete-button" data-tooltip="Delete from cart">✖️</button>
+                </div>
             </div>
-            
 
             <div class="row">
-                <span class="item">Milk</span>
-                <button class="minus-button">-</button>
-                <span class="counter">1</span>
-                <button class="plus-button">+</button>
-                <button class="bought-button">Bought</button>
-                <button class="delete-button">Delete</button>
-                <hr>
+                <span class="item">Cheese</span>
+                
+                <div class="counter-group">
+                    <button class="minus-button" data-tooltip="Decrease element quantity">-</button>
+                    <span class="counter">1</span>
+                    <button class="plus-button" data-tooltip="Increase element quantity">+</button>
+                </div>
+                
+                <div class="action-group">
+                    <button class="bought-button" data-tooltip="Mark as bought">Bought</button>
+                    <button class="delete-button" data-tooltip="Delete from cart">✖️</button>
+                </div>
             </div>
-            
-
         </div>
 
         <div class="cart-data">
-            <span class="data">Left
-                <span class="item-in-list">
-                <span> Tomatoes 
+            <h2 class="data">Left</h2>
+            <div class="item-row">
+                <div class="item-in-list"> Bread
+                    <span class="counter-in-list">2</span>
+                </div>
+                <div class="item-in-list"> Cheese
                     <span class="counter-in-list">1</span>
-                </span>
-                <span> Bread
-                    <span class="counter-in-list">1</span>
-                </span>
-                <span> Milk
-                    <span class="counter-in-list">1</span>
-                </span>
-            </span>
-            <hr>
-            </span>
+                </div>
+            </div>
             
-
-            <span class="data">Bought</span>
+            <h2 class="data">Bought</h2>
+            <div class="item-row">
+                <div class="item-in-list"> Tomatoes
+                    <span class="counter-in-list">2</span>
+                </div>
+            </div>
         </div>
     </div>
 
     <span class="badge">
-        Buy List
+        <span class="title">Buy List</span>
         <span class="created-by">created by:</span>
         <span class="author">Nikita Hella</span>
     </span>
