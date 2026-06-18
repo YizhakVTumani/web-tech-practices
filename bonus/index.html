@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Морський Бій</title>
+    <link href="https://cdn.webdatarocks.com/latest/webdatarocks.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.webdatarocks.com/latest/webdatarocks.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Морський Бій</h1>
+    <button id="btn-gen" class="btn-gen">Рандомні Кораблі</button>
+    <div id="info-banner">Шукаємо суперника</div>
+
+    <div class="grid-container">
+        <div class="grid-box">
+            <h3>Ваш флот</h3>
+            <div id="wdr-player"></div>
+        </div>
+        <div class="grid-box">
+            <h3>Ворог</h3>
+            <div id="wdr-enemy"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
